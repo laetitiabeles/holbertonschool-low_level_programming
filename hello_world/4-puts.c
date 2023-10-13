@@ -2,18 +2,21 @@
 #include <string.h>
 
 /**
- * Fonction principale (main) du programme.
- *
- * Cette fonction affiche une chaîne de caractères sur la sortie standard.
- *
- * @return 0 en cas de succès.
- */
+* main - Entry point
+*
+* Description: Le programme déclare une variable Mystr dont la valeur est
+* une chaine de caractères. La fonction puts() execute la variable déclarée.
+*
+* Return: 0 (Success)
+*/
 
 int main(void)
 {
+
 char Mystr[] = "\"Programming is like building a multilingual puzzle";
 
 puts(Mystr);
 
 return (0);
+
 }
