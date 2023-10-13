@@ -1,9 +1,12 @@
 #include <stdio.h>
 
 /**
-* main is the entry point
-* the program displays a string with the function printf
-* the program returns 0 if it executes successfull
+* main - Entry point
+*
+* Description: Le programme execute une chaine de caractères avec la
+* fonction printf.
+*
+* Return: 0 (Success)
 */
 
 int main(void)
