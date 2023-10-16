@@ -23,7 +23,7 @@ putchar('0' + n);
 for (n = 10 ; n <= 15 ; n++)
 {
 
-putchar('A' + (n - 10));
+putchar('a' + (n - 10));
 
 }
 
