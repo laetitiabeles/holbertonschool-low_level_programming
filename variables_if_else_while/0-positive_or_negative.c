@@ -22,7 +22,7 @@ n = rand() - RAND_MAX / 2;
 if (n > 0)
 {
 
-printf("%d est positif\n", n);
+printf("%d is positive\n", n);
 
 }
 
