@@ -14,7 +14,9 @@ int main(void)
 {
 
 int n;
-int last_d = n % 10;
+int last_d;
+
+last_d = n % 10;
 
 srand(time(0));
 n = rand() - RAND_MAX / 2;
