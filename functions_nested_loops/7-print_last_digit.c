@@ -18,12 +18,10 @@ int last_d = n % 10;
 if (n >= 0)
 {
 _putchar(48 + last_d);
-return (48 + last_d);
 }
 else
 {
-_putchar(48 - last_d);
-return (48 - last_d);
+_putchar(48 - -last_d);
 }
 return (last_d);
 }
