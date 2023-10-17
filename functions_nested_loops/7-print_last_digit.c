@@ -17,10 +17,11 @@ int last_d = n % 10;
 
 if (n >= 0)
 {
-return (last_d);
+_putchar(48 + last_d);
 }
 else
 {
-return (0);
+_putchar(48 - last_d);
 }
+return (last_d);
 }
