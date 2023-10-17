@@ -23,6 +23,8 @@ else
 {
 last_d = n % 10;
 }
-_putchar(last_d);
-return (last_d);
+
+_putchar('0' + last_d);
+
+return last_d;
 }
