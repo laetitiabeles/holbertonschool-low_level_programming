@@ -21,7 +21,7 @@ _putchar(48 + last_d);
 }
 else
 {
-_putchar(48 - last_d);
+_putchar(last_d + 48);
 }
 return (last_d);
 }
