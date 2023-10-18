@@ -11,31 +11,35 @@ int num;
 int m;
 int prod;
 
-	for (num = 0 ; num <= 9 ; num++)
-	{
-		_putchar('0');
+for (num = 0 ; num <= 9 ; num++)
+{
+_putchar('0');
 
-		for (m = 1 ; m <= 9 ; m++)
-		{
-			_putchar(',');
-			_putchar(' ');
+for (m = 0 ; m <= 9 ; m++)
+{
 
-			prod = num * m;
+prod = num * m;
 
-			if (prod <= 9)
-			{
-				_putchar(' ');
-			}
-			else
-			{
-				_putchar((prod / 10) + '0');
+if (m == 0)
+{
+_putchar('0');
+}
+else 
+{
+_putchar(44);
+_putchar(20);
+}
+if (prod <= 9)
+{
+_putchar(' ');
+}
+else
+{
+_putchar((prod / 10) + '0');
+}
 
-			_putchar((prod % 10) + '0');
-		}
-		_putchar('\n');
-	}
+_putchar((prod % 10) + '0');
 }
 }
-
-
-
+_putchar('\n');
+}
