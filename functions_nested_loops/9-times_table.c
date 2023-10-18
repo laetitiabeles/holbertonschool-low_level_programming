@@ -27,7 +27,7 @@ _putchar('0');
 else 
 {
 _putchar(44);
-_putchar(20);
+_putchar(' ');
 }
 if (prod <= 9)
 {
