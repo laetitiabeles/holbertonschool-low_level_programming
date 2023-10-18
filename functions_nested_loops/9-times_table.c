@@ -26,7 +26,7 @@ int prod;
 			{
 				_putchar(',');
 				_putchar(' ');
-			}
+			
 			if (prod <= 9)
 			{
 				_putchar(' ');
@@ -39,5 +39,6 @@ int prod;
 				_putchar((prod % 10) + '0');
 			}
 		}
-			_putchar('\n');
+		_putchar('\n');
+	}
 }
