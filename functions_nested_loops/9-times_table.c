@@ -26,7 +26,7 @@ int prod;
 			{
 				_putchar(',');
 				_putchar(' ');
-			
+
 			if (prod <= 9)
 			{
 				_putchar(' ');
