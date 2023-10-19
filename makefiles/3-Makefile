@@ -12,13 +12,13 @@ school.o : school.c
 main.o : main.c
 	$(CC) -o $(OBJ) -c $(SRC) $(NAME)
 
-oclean :
+oclean : $(OBJ)
 	$(RM) *.o
 
 clean :
 	$(RM) *~
 
-fclean : clean
+fclean : clean $(NAME)
 	$(RM) $(NAME)
 
 re: fclean all
