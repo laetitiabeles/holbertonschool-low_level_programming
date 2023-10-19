@@ -10,19 +10,10 @@ clean :
 all : $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
-$(NAME) : $(OBJ)
-	$(CC) -o $(NAME) $(OBJ)
-
-school.o : school.c
-	$(CC) -o $(OBJ) -c $(SRC) $(NAME)
-
-main.o : main.c
-	$(CC) -o $(OBJ) -c $(SRC) $(NAME)
-
-oclean : $(OBJ)
+oclean :
 	$(RM) *.o
 
-fclean : clean $(NAME)
-	$(RM) $(NAME)
+fclean : clean oclean
+	$(RM) $(NAME
 
 re: fclean all
