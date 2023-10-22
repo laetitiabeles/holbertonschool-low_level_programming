@@ -9,10 +9,18 @@
 
 void print_diagonal(int n)
 {
+
+int slash;
+int esp;
+
 	if (n > 0)
 	{
-		for (; n > 0; n--)
+		for (slash = 1; slash <= n; slash++)
 		{
+			for (esp = 1; esp < slash; esp++)
+			{
+				_putchar(' ');
+			}
 			_putchar('\\');
 			_putchar('\n');
 		}
