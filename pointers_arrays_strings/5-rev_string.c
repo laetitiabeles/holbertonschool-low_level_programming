@@ -1,5 +1,4 @@
 #include "main.h"
-#include <string.h>
 
 /**
 * _strlen - calcule la longueur d'une string
@@ -12,10 +11,12 @@ int _strlen(char *s)
 {
 	int len = 0;
 
-		for (; *s != '0'; s++)
-		{
-			len++;
-		}
+	while (*s != '0')
+	{
+		len++;
+		s++;
+	}
+
 	return (len);
 }
 
@@ -28,7 +29,7 @@ void rev_string(char *s)
 {
 
 	int b = 0;
-	int e = (_strlen(s) - 1);
+	int e = _strlen(s) - 1;
 	char tempo;
 
 	while (b < e)
