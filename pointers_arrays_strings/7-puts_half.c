@@ -26,19 +26,21 @@ int _strlen(char *str)
 void puts_half(char *str)
 {
 	int len = _strlen(str);
-	int moitie = len / 2;
+	int moitie;
 	int i;
+
+	if (len % 2 == 0)
+	{
+		moitie = len / 2;
+	}
+	else
+	{
+		moitie = (len - 1) / 2;
+	}
 
 	for (i = moitie; i < len; i++)
 	{
-		if (len % 2 != 0)
-		{
-			_putchar((str[i] - 1));
-		}
-		else
-		{
-			_putchar(str[i]);
-		}
+		_putchar(str[i]);
 	}
 	_putchar('\n');
 }
