@@ -1,27 +1,41 @@
 #include "main.h"
 
 /**
-* rev_string - Entry point
-* @s: pointeur
+* _strlen - calcule la longueur d'une string
+* @s: la string à calculer
 * Description: program that print a string in reverse
 * Return: always 0
 */
 
-void rev_string(char *s)
+int _strlen(char *s)
 {
 	int len = 0;
-	int l = 0;
-	char temp;
 
-	while (s[l++])
+	for (; *s != '0'; s++)
 	{
 		len++;
 	}
+	return (len);
+}
 
-	for (l = len - 1; l >= len / 2; l++)
+/**
+* rev_string - Entry point
+* @s: pointeur
+*/
+
+void rev_string(char *s)
+{
+
+	int b = 0;
+	int e = (_strlen(s) - 1);
+	char tempo;
+
+	while (b < e)
 	{
-		temp = s[l];
-		s[l] = s[len - l - 1];
-		s[len - l - 1] = temp;
+		tempo = s[b];
+		s[b] = s[e];
+		s[e] = tempo;
+		b++, e--;
 	}
+
 }
