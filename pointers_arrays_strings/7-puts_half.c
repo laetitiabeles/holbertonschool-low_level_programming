@@ -29,13 +29,13 @@ void puts_half(char *str)
 	int moitie;
 	int i;
 
-	if (len % 2 == 0)
+	if (len % 2 != 0)
 	{
-		moitie = len / 2;
+		moitie = (len - 1) / 2;
 	}
 	else
 	{
-		moitie = (len - 1) / 2;
+		moitie = len / 2;
 	}
 
 	for (i = moitie; i < len; i++)
