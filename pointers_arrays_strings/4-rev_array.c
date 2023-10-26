@@ -8,16 +8,17 @@
 * Return: always 0
 */
 
+
 void reverse_array(int *a, int n)
 {
-	int i = 0;
+	int i = n - 1; /* index = size - 1 */
 	int tempo;
 
-	while (i < n / 2)
+	while (i < n) /* tant que l'index est inférieur à la size */
 	{
-		tempo = a[i];
-		a[i] = a[n - 1 - i];
-		a[n - 1 - i] = tempo;
+		tempo = a[i]; /* temporaire prend la valeur de ai */
+		a[i] = a[i - n + 1]; /* ai prend la valeur de l'array size - index */
+		a[i - n + 1] = tempo;
 
 		i++;
 		n--;
