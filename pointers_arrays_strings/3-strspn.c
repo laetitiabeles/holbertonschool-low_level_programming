@@ -2,7 +2,7 @@
 
 /**
 *_strspn - function that gets the length of a prefix substring
-*@s: string
+*@s: pointeur vers la string que l'on souhaite analyser
 *@accept: accepted characters
 *
 *Return: bytes
@@ -18,14 +18,14 @@ unsigned int _strspn(char *s, char *accept)
 
 		for (i = 0; accept[i] != '\0'; i++)
 		{
-			if (accept[i] == *s)
+			if (accept[i] == *s) /* compare le caractere pointe de accept et de s */
 			{
-				len++;
-				break;
+				len++; /* indique une correspondance */
+				break; /* sortie de boucle si correspondance trouvée */
 			}
 		}
 
-	if ((accept[i]) == '\0')
+	if ((accept[i]) == '\0') /* si aucune correspondance n'a été trouvée */
 	{
 		return (len);
 	}
