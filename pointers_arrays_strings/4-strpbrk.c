@@ -11,17 +11,17 @@
 char *_strpbrk(char *s, char *accept)
 {
 
-	for (; *s; s++)
+	for (; *s; s++) /* parcours s */
 	{
 		int i;
 
-		for (i = 0; accept[i]; i++)
+		for (i = 0; accept[i]; i++) /* parcours accept */
 		{
-			if (accept[i] == *s)
+			if (accept[i] == *s) /* compare le caractere de accept et s */
 			{
-				return (s);
+				return (s); /* si une correspondance est trouvée */
 			}
 		}
 	}
-	return ('\0');
+	return ('\0'); /* si aucune correspondance n'est trouvée */
 }
