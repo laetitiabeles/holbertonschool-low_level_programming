@@ -9,6 +9,8 @@
 *Return: char
 */
 
+/* memset remplit une zone mémoire pointée par s avec la valeur b */
+
 char *_memset(char *s, char b, unsigned int n)
 {
 	unsigned int i = 0;
@@ -18,9 +20,9 @@ char *_memset(char *s, char b, unsigned int n)
 		return (s);
 	}
 
-	while (i != n)
+	while (i != n) /* tant que le compteur n'a pas la valeur n */
 	{
-		s[i] = b;
+		s[i] = b; /* la valeur b est copiée dans l'emplacement pointé */
 		i++;
 	}
 	return (s);
