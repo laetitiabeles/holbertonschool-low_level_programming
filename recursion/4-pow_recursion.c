@@ -1,10 +1,11 @@
 #include "main.h"
 
 /**
-* _puts_recursion - writes a string with recursion
-* @s: The string to print
+* _pow_recursion - function that calculate x raised to the power y
+* @x: number to check
+* @y: number to check
 *
-* Return: Always 0
+* Return: value of x raised to y
 */
 
 int _pow_recursion(int x, int y)
