@@ -12,7 +12,6 @@ int main(int argc, char **argv)
 	int source, destination, readFile, writeFile;
 	char buffer[1024];
 
-	/* Si le nombre d'argument n'est pas de 3 */
 	if (argc != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
@@ -21,7 +20,7 @@ int main(int argc, char **argv)
 
 	/* Ouvrir le fichier source */
 	source = open(argv[1], O_RDONLY);
-	if (source == -1) /* S'il n'y a pas de src */
+	if (source == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
@@ -29,12 +28,13 @@ int main(int argc, char **argv)
 
 	/* Création du fichier de destination */
 	destination = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	if (destination == -1) /* S'il n'existe pas*/
+	if (destination == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
 
+	/* Copie depuis source dans destination */
 	while ((readFile = read(source, buffer, sizeof(buffer))) > 0)
 	{
 		writeFile = write(destination, buffer, readFile);
