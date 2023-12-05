@@ -20,8 +20,8 @@ int main(int argc, char **argv)
 	}
 
 	/* Ouvrir le fichier source */
-	source = open(argv[1], O_RDWR);
-	if (source < 0) /* S'il n'y a pas de src */
+	source = open(argv[1], O_RDONLY);
+	if (source == -1) /* S'il n'y a pas de src */
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from the file %s\n", argv[1]);
 		exit(98);
@@ -29,9 +29,9 @@ int main(int argc, char **argv)
 
 	/* Création du fichier de destination */
 	destination = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	if (destination < 0) /* S'il n'existe pas*/
+	if (destination == -1) /* S'il n'existe pas*/
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[1]);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
 
@@ -45,7 +45,7 @@ int main(int argc, char **argv)
 		}
 	}
 
-	if (readFile < 0)
+	if (readFile == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from the file %s\n", argv[1]);
 		exit(98);
