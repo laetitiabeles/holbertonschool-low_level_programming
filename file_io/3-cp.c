@@ -31,7 +31,7 @@ int main(int argc, char **argv)
 	destination = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (destination < 0) /* S'il n'existe pas*/
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to", argv[1]);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[1]);
 		exit(99);
 	}
 
